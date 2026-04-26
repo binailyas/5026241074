@@ -1,0 +1,49 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\TugasController;
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('halo', function () {
+	return "<h1>Halo, Selamat datang</h1> di tutorial laravel <u>www.malasngoding.com</u>";
+});
+
+Route::get('blog', function () {
+	return view('blog');
+});
+
+Route::get('pert5', function () {
+	return view('pertemuan5');
+});
+
+Route::get('dosen', [DosenController::class, 'index']);
+Route::get('biodata', [DosenController::class, 'biodata']);
+
+//pertemuan 1
+Route::get('intro', [TugasController::class, 'intro']);
+
+//pertemuan 2
+Route::get('news', [TugasController::class, 'news']);
+Route::get('news1', [TugasController::class, 'news1']);
+
+//pertemuan 3
+Route::get('responsive', [TugasController::class, 'responsive']);
+Route::get('template', [TugasController::class, 'template']);
+Route::get('tugaspertemuan3', [TugasController::class, 'tugaspertemuan3']);
+
+//pertemuan 4
+Route::get('tugaspertemuan4', [TugasController::class, 'tugaspertemuan4']);
+
+//pertemuan 5
+Route::get('index', [TugasController::class, 'index']);
+Route::get('pertemuan5', [TugasController::class, 'pertemuan5']);
+
+//pertemuan 5 dan 6
+Route::get('linktree', [TugasController::class, 'linktree']);
+
+

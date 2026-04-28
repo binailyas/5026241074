@@ -46,4 +46,5 @@ Route::get('pertemuan5', [TugasController::class, 'pertemuan5']);
 //pertemuan 5 dan 6
 Route::get('linktree', [TugasController::class, 'linktree']);
 
-
+//halaman menu
+Route::get('menu', [TugasController::class, 'menu']);

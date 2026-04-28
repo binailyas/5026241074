@@ -53,6 +53,12 @@ public function pertemuan5(){
 public function linktree(){
     	return view('linktree');
     }
-}
 
+
+    //halaman menu
+public function menu(){
+    	return view('menu');
+    }
+
+}
 

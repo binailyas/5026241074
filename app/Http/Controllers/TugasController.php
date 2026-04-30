@@ -54,7 +54,8 @@ public function linktree(){
     	return view('linktree');
     }
 
-    //halaman menu
+
+    //halaman menu pertemuan 8
 public function menu(){
     	return view('menu');
     }

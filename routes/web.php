@@ -6,7 +6,8 @@ use App\Http\Controllers\TugasController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
-
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BukuController;
 
 
 Route::get('/', function () {
@@ -74,3 +75,22 @@ Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
 
+
+//route siswa (materi asinkronus)
+//route CRUD siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+
+// route CRUD tabel buku (tugas pra eas)
+Route::get('/buku', [BukuController::class, 'index']);
+Route::get('/buku/tambah', [BukuController::class, 'tambah']);
+Route::post('/buku/store', [BukuController::class, 'store']);
+Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
+Route::post('/buku/update', [BukuController::class, 'update']);
+Route::get('/buku/hapus/{id}', [BukuController::class, 'hapus']);
+Route::get('/buku/cari', [BukuController::class, 'cari']);

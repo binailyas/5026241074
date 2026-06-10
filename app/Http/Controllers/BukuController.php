@@ -31,7 +31,7 @@ class BukuController extends Controller
 	// method untuk insert/menyimpan data buku baru ke table buku
 	public function store(Request $request)
 	{
-		// insert data ke table pegawai
+		// insert data ke table buku
 		DB::table('buku')->insert([
 			'merkbuku' => $request->merkbuku,
 			'stockbuku' => $request->stockbuku,

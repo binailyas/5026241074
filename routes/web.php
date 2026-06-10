@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\KeranjangController;
 
 
 Route::get('/', function () {
@@ -94,3 +95,10 @@ Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
 Route::post('/buku/update', [BukuController::class, 'update']);
 Route::get('/buku/hapus/{id}', [BukuController::class, 'hapus']);
 Route::get('/buku/cari', [BukuController::class, 'cari']);
+
+
+// route CRUD tabel keranjang
+Route::get('/keranjang', [KeranjangController::class, 'index']);
+Route::get('/keranjang/tambah', [KeranjangController::class, 'tambah']);
+Route::post('/keranjang/store', [KeranjangController::class, 'store']);
+Route::get('/keranjang/hapus/{id}', [KeranjangController::class, 'hapus']);

@@ -35,7 +35,7 @@
                         <a class="nav-link" href="keranjang">D4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">E5</a>
+                        <a class="nav-link" href="nilaikuliah">E5</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>

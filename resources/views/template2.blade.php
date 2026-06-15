@@ -38,7 +38,7 @@
                         <a class="nav-link" href="nilaikuliah">E5</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="mypegawai">EAS</a>
                     </li>
                 </ul>
             </div>
